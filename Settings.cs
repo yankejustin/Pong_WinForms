@@ -46,8 +46,8 @@ namespace Pong_WinForms
             }
             else
             {
-                Player1Speed = 5;
-                Player2Speed = 5;
+                Player1Speed = 7;
+                Player2Speed = 7;
                 BallSpeed = 5;
                 WinScore = 10;
             }

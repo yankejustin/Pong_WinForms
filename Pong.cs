@@ -23,18 +23,19 @@ namespace Pong_WinForms
 
         public Pong()
         {
-            //InitializeComponent();
+            InitializeComponent();
 
             _settings = new Settings();
 
             // Create ball
-            var ballSize = 20;
+            var ballSize = 50;
             var ballX = FormWidth / 2 - ballSize / 2;
             var ballY = FormHeight / 2 - ballSize / 2;
             var ballSpeedX = _settings.BallSpeed;
             var ballSpeedY = _settings.BallSpeed;
-            var ballBrush = Brushes.Black;
+            var ballBrush = Brushes.WhiteSmoke;
             _ball = new Ball(ballX, ballY, ballSize, ballSpeedX, ballSpeedY, ballBrush);
+            _ball.Size = ballSize;
 
             // Create players
             var paddleWidth = 10;
@@ -77,7 +78,7 @@ namespace Pong_WinForms
             e.Graphics.FillRectangle(_player2.Brush, _player2.GetBounds());
 
             // Draw scores
-            var scoreFont = new Font("Arial", 20);
+            var scoreFont = new Font("Arial", 30);
             var scoreBrush = Brushes.White;
             var player1ScorePosition = new PointF(FormWidth / 2 - 50, 20);
             var player2ScorePosition = new PointF(FormWidth / 2 + 25, 20);
